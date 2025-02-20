@@ -1,4 +1,4 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Task4_ASP.net.Models;
 
@@ -17,6 +17,18 @@ namespace Task4_ASP.net.Controllers
         {
             return View();
         }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult Index1()
+        {
+            return View();
+        }
+
 
         public IActionResult Privacy()
         {

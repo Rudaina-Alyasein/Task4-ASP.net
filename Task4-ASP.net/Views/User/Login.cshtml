@@ -37,21 +37,21 @@
                                 <!-- Email -->
                                 <div class="col-12">
                                     <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="@ViewData["UserEmail"]" required>
                                 </div>
 
                                 <!-- Password -->
                                 <div class="col-12">
                                     <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
-                                    <input type="password" class="form-control" id="password" name="password" required>
+                                    <input type="password" class="form-control" id="password" name="password" value="@ViewData["UserPassword"]" required>
                                 </div>
 
                                 <!-- Terms and Conditions -->
                                 <div class="col-12">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="iAgree" required>
+                                        <input class="form-check-input" type="checkbox" id="iAgree" required value="yes" name="rem">
                                         <label class="form-check-label text-secondary" for="iAgree">
-                                            I agree to the <a href="#!" class="link-primary text-decoration-none" style="color: #fa65b1!important;">terms and conditions</a>
+                                           Remember me  <a href="#!" class="link-primary text-decoration-none" </a>
                                         </label>
                                     </div>
                                 </div>
