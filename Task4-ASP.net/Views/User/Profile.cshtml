@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string[] userData = (string[])TempData["UserData"];
+
+}
+<!-- Personal Information Section -->
+<div class="card Personal-Card">
+    <div class="card-body">
+        <h5 class="card-title">Firstname:@userData[2]</h5>
+        <h5 class="card-title">Lastname:@userData[3]</h5>
+
+        <h5 class="card-text">Email:@userData[0] </h5>
+        <h5 class="card-title">Password:@userData[1]</h5>
+
+        <button class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#EditProfile">Edit Profile</button>
+    </div>
+</div>

@@ -53,7 +53,7 @@ public IActionResult HandelRegister(string firstName, string lastName, string em
         HttpContext.Session.SetString("Email", email);
         HttpContext.Session.SetString("Password", password);
             HttpContext.Session.SetString("FirstName", firstName);
-            HttpContext.Session.SetString("LasttName", lastName);
+            HttpContext.Session.SetString("LastName", lastName);
 
 
 
@@ -88,7 +88,22 @@ public IActionResult HandelRegister(string firstName, string lastName, string em
                 return View("Login");
             }
         }
+        public IActionResult Profile()
+        {
+            string storedEmail = HttpContext.Session.GetString("Email");
+            string storedPassword = HttpContext.Session.GetString("Password");
+            string firstName = HttpContext.Session.GetString("FirstName");
+            string lastName = HttpContext.Session.GetString("LastName");
+
+            string[] userData = { storedEmail, storedPassword, firstName, lastName };
+
+            TempData["UserData"] = userData;
+
+            return View();
+        }
+
 
     }
+
 
 }
